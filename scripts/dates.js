@@ -1,0 +1,398 @@
+const DATES = [
+  {
+    "title": "Our First Date",
+    "date": "August 18, 2024",
+    "folder": "2024-08-18",
+    "places": [
+      {
+        "title": "Songjiang Nanjing Station",
+        "image": "songjiang_nanjing.jpg",
+        "address": "104, Taiwan, 台北市 Zhongshan District, 松江路126號",
+        "description": "My first time ever laying eyes on you <3",
+        "lat": 25.05278,
+        "lng": 121.53271
+      },
+      {
+        "title": "FuHang Soy Milk",
+        "image": "fuhang.jpeg",
+        "address": "100, Taiwan, Taipei City, Zhongzheng District, Section 1, Zhongxiao E Rd, 108號2樓",
+        "description": "Our very first date, where the food wasn't nearly as good as usual and is definitely not a good representative of a traditional Taiwanese breakfast",
+        "lat": 25.044254,
+        "lng": 121.524772
+      },
+      {
+        "title": "Giant Panda Exhibit",
+        "image": "panda.jpeg",
+        "address": "No. 30號, Section 2, Xinguang Rd, Wenshan District, Taipei City, Taiwan 116",
+        "description": "Ah yes, the giant exhibit of average sized pandas",
+        "lat": 25.00091,
+        "lng": 121.58419
+      },
+      {
+        "title": "Penguins!!",
+        "image": "penguins.jpeg",
+        "address": "No. 30號, Section 2, Xinguang Rd, Wenshan District, Taipei City, Taiwan 116",
+        "description": "Omg we got to be excited about penguins together for the first time <3",
+        "lat": 25.00091,
+        "lng": 121.58419
+      },
+      {
+        "title": "Birds",
+        "image": "bird.jpeg",
+        "address": "No. 30號, Section 2, Xinguang Rd, Wenshan District, Taipei City, Taiwan 116",
+        "description": "And here you get to see me be autistic about birds for the first time",
+        "lat": 25.00091,
+        "lng": 121.58419
+      },
+      {
+        "title": "Scallion Pancake",
+        "image": "scallion_pancake.jpeg",
+        "address": "No. 1號, Lane 6, Yongkang St, Da'an District, Taipei City, Taiwan 106",
+        "description": "We sat on a park bench together, and I later found out you wanted me to hold your hand here",
+        "lat": 25.03256,
+        "lng": 121.529505
+      }
+    ]
+  },
+  {
+    "title": "My First Toronto Trip",
+    "date": "November 15, 2024",
+    "folder": "2024-11-15",
+    "places": [
+      {
+        "title": "Snack Wrap",
+        "image": "snack_wrap.jpeg",
+        "address": "1383 16th Ave Unit 1, Richmond Hill, ON L4B 0E2, Canada",
+        "description": "My first trip to Canada!! Snack wraps immediately",
+        "lat": 43.8615359,
+        "lng": -79.3903066
+      },
+      {
+        "title": "Rice Noodles",
+        "image": "rice_noodle.jpeg",
+        "address": "3235 Hwy 7 Unit 16, Markham, ON L3R 3P3, Canada",
+        "description": "We got hungry after... uh... holding hands 👀 Still one of the best broths I've ever had",
+        "lat": 43.850553,
+        "lng": -79.348439
+      },
+      {
+        "title": "Fake Lime Rock Park Edition M3",
+        "image": "m3.jpeg",
+        "address": "8330 Woodbine Ave, Markham, ON L3R 2N8, Canada",
+        "description": "Here, you got to see me be autistic about BMWs and see me go talk to some random guy about his car for the first time",
+        "lat": 43.8603872,
+        "lng": -79.3610585
+      },
+      {
+        "title": "Chick Fil A",
+        "image": "chickfila.jpeg",
+        "address": "220 Yonge St, Toronto, ON M5B 2H1, Canada",
+        "description": "Your first time having Chick Fil A... I'm still mindblown by how good the spicy tenders are",
+        "lat": 43.6541025,
+        "lng": -79.380997
+      },
+      {
+        "title": "CN Tower",
+        "image": "cn_tower.jpeg",
+        "address": "290 Bremner Blvd, Toronto, ON M5V 3L9, Canada",
+        "description": "Our first downtown date together <3 and our first selfie together <333 here you also found out that I was a closeted Swiftie",
+        "lat": 43.6425637,
+        "lng": -79.3870872
+      },
+      {
+        "title": "Drinks with Friends",
+        "image": "drinks.jpeg",
+        "address": "72 Steeles Ave, Thornhill, ON L4J 1A1, Canada",
+        "description": "First time meeting your friends, and the first time going somewhere with you as a couple ❤️❤️❤️",
+        "lat": 43.797823,
+        "lng": -79.425172
+      },
+      {
+        "title": "Brunch",
+        "image": "brunch.jpeg",
+        "address": "4360 Highway 7, Markham, ON L3R 1L9, Canada",
+        "description": "Our first breakfast date together, after cuddling as bf/gf for the first time <3",
+        "lat": 43.8609161,
+        "lng": -79.3124033
+      },
+      {
+        "title": "My Favorite Photo",
+        "image": "favorite_photo.jpeg",
+        "address": "280 Main Street, Unionville, ON L3R 2H2, Canada",
+        "description": "One of my favorite photos of us <3 I'm so happy with you",
+        "lat": 43.8731767,
+        "lng": -79.3127854
+      }
+    ]
+  },
+  {
+    "title": "Valentine's Day 2025",
+    "date": "February 14, 2025",
+    "folder": "2025-02-14",
+    "places": [
+      {
+        "title": "Airport Flowers",
+        "image": "airport_flowers.jpeg",
+        "address": "6301 Silver Dart Dr, Mississauga, ON L5P 1B2, Canada",
+        "description": "Somehow managed to bring a bouquet of flowers from Trader Joe's in Irvine all the way to Toronto. Happy Valentine's Day <3",
+        "lat": 43.6831244,
+        "lng": -79.6120273
+      },
+      {
+        "title": "Valentine's Dinner",
+        "image": "airbnb_date.jpeg",
+        "address": "26a Scott Dr, Richmond Hill, ON L4C 6V6, Canada",
+        "description": "I still need to redeem myself, but hey the steak wasn't THAT bad",
+        "lat": 43.8456505,
+        "lng": -79.435211
+      },
+      {
+        "title": "Penguins!!",
+        "image": "penguins.jpeg",
+        "address": "9350 Yonge St, Richmond Hill, ON L4C 5G2, Canada",
+        "description": "Omg penguins! Our matching babies until we have real ones someday 👀 Except you do weird stuff with yours",
+        "lat": 43.8558031,
+        "lng": -79.4367902
+      },
+      {
+        "title": "Snow <3",
+        "image": "snow_day.jpeg",
+        "address": "26a Scott Dr, Richmond Hill, ON L4C 6V6, Canada",
+        "description": "My first time playing in snow this heavy... I loved it so much, especially with you",
+        "lat": 43.8456505,
+        "lng": -79.435211
+      },
+      {
+        "title": "Korean Food",
+        "image": "korean_food.jpeg",
+        "address": "10737 Yonge St unit 2&3, Richmond Hill, ON L4C 9M9, Canada",
+        "description": "Trying to change my mind on Korean food after my flight got delayed by four days, but it was good!",
+        "lat": 43.881443,
+        "lng": -79.439269
+      },
+      {
+        "title": "Coffee & Matcha",
+        "image": "coffee.jpeg",
+        "address": "6084 Yonge St, North York, ON",
+        "description": "Coffee and matcha break after school before meeting up with your parents for AYCE",
+        "lat": 43.7600267,
+        "lng": -79.4106348
+      },
+      {
+        "title": "Ramen Lunch",
+        "image": "ramen.jpeg",
+        "address": "5168 Yonge St, North York, ON",
+        "description": "Ah yes, picking up my gf from high school to go get lunch",
+        "lat": 43.7600267,
+        "lng": -79.4106348
+      },
+      {
+        "title": "AYCE with Parents",
+        "image": "parents.jpg",
+        "address": "A9A-5095 Yonge St, North York, ON",
+        "description": "First formal-ish dinner with your parents... and it had to be AYCE after I had eaten stuff that day",
+        "lat": 43.7692555,
+        "lng": -79.4122955
+      }
+    ]
+  },
+  {
+    "title": "Your First LA Trip",
+    "date": "March 7, 2025",
+    "folder": "2025-03-07",
+    "places": [
+      {
+        "title": "Soju Belly",
+        "image": "soju_belly.jpeg",
+        "address": "13051 Kerry St, Garden Grove, CA 92844",
+        "description": "First round of meeting my friends, including Anthony (ew)",
+        "lat": 33.773589,
+        "lng": -117.958917
+      },
+      {
+        "title": "Cars and Coffee",
+        "image": "carsandcoffee.jpg",
+        "address": "101 W Avenida Vista Hermosa, San Clemente, CA 92672",
+        "description": "Our first car event together <333 hopefully lots more in the future",
+        "lat": 33.4358089,
+        "lng": -117.6278283
+      },
+      {
+        "title": "Wasabi",
+        "image": "wasabi.jpg",
+        "address": "123 Pusan, Irvine, CA 92618",
+        "description": "WASABIIII! This almost looks like a family photo omg <3",
+        "lat": 33.6788411,
+        "lng": -117.7192234
+      },
+      {
+        "title": "RISE Rooftop Bar",
+        "image": "rise.jpg",
+        "address": "1030 W Katella Ave, Anaheim, CA 92802",
+        "description": "Disney fireworks with the prettiest girl in the world",
+        "lat": 33.8021237,
+        "lng": -117.9224182
+      },
+      {
+        "title": "Hotel Selfie",
+        "image": "hotel_selfie.jpeg",
+        "address": "2726 S Grand Ave, Santa Ana, CA 92705",
+        "description": "You're so cute when you're getting ready omg",
+        "lat": 33.7099843,
+        "lng": -117.8520291
+      },
+      {
+        "title": "The Other Woman",
+        "image": "e30.jpeg",
+        "address": "123 Pusan, Irvine, CA 92618",
+        "description": "Ah yes, the other woman (aka the E30). Hopefully this didn't scare you off from sports cars",
+        "lat": 33.6788411,
+        "lng": -117.7192234
+      },
+      {
+        "title": "Hotel Selfie",
+        "image": "hotel_selfie2.jpeg",
+        "address": "2726 S Grand Ave, Santa Ana, CA 92705",
+        "description": "Another hotel selfie bc you're just so cute",
+        "lat": 33.7099843,
+        "lng": -117.8520291
+      },
+      {
+        "title": "The Marine Room",
+        "image": "marine_room.jpeg",
+        "address": "1950 Spindrift Dr, La Jolla, CA 92037",
+        "description": "Fancy dinner with my fancy baby <3",
+        "lat": 32.8515212,
+        "lng": -117.2610931
+      },
+      {
+        "title": "La Jolla",
+        "image": "la_jolla.jpg",
+        "address": "555 Coast S Blvd, La Jolla, CA 92037",
+        "description": "One of my favorite places ever... I can't wait for more memories like this with you",
+        "lat": 32.843805,
+        "lng": -117.278935
+      },
+      {
+        "title": "Bopomofo Cafe",
+        "image": "bopomofo.jpeg",
+        "address": "7951 Othello Ave suite 106, San Diego, CA 92111",
+        "description": "Finally found the pineapple bun burger in Bopomofo Cafe SD",
+        "lat": 32.816513,
+        "lng": -117.152234
+      },
+      {
+        "title": "Cat Cafe!",
+        "image": "cat.jpeg",
+        "address": "302 Island Ave #101, San Diego, CA 92101",
+        "description": "I almost died but this was so worth it... we should get a cat together someday",
+        "lat": 32.7106008,
+        "lng": -117.1615788
+      }
+    ]
+  },
+  {
+    "title": "My 26th Birthday Trip",
+    "date": "April 18, 2025",
+    "folder": "2025-04-18",
+    "places": [
+      {
+        "title": "Richmond Hill Center",
+        "image": "rhill_center.jpg",
+        "address": "8675 Yonge St, Richmond Hill, ON L4B 4K1, Canada",
+        "description": "I still remember you running towards me that day <3",
+        "lat": 43.840171,
+        "lng": -79.4255269
+      },
+      {
+        "title": "After Seven",
+        "image": "after_seven.jpeg",
+        "address": "10 Stephanie St, Toronto, ON M5T 0B6, Canada",
+        "description": "Exploring a downtown speakeasy with your friends, then amazing ramen afterwards",
+        "lat": 43.6510945,
+        "lng": -79.3921409
+      },
+      {
+        "title": "Canada Goose™",
+        "image": "canada_goose.jpg",
+        "address": "1151 Richmond St, London, ON N6A 3K7, Canada",
+        "description": "Does this hurt the goose",
+        "lat": 43.00937,
+        "lng": -81.2618335
+      },
+      {
+        "title": "Sushi Burritos & Wonton Nachos",
+        "image": "wonton_nachos.jpeg",
+        "address": "723 Richmond St #1, London, ON N6A 3H2, Canada",
+        "description": "Still the best sushi burrito I've ever had. I miss this place",
+        "lat": 42.9948089,
+        "lng": -81.253031
+      },
+      {
+        "title": "Sketchy White Van",
+        "image": "van.jpeg",
+        "address": "6361 Fallsview Blvd, Niagara Falls, ON L2G 3V9, Canada",
+        "description": "Ah yes, $50 to park in a remote lot and be stuffed into a sketchy white van",
+        "lat": 43.0826629,
+        "lng": -79.0831877
+      },
+      {
+        "title": "Niagara Falls",
+        "image": "niagara.jpeg",
+        "address": "6155 Allendale Ave, Niagara Falls, ON L2G 2B2, Canada",
+        "description": "Best weekend of my life <3 also can confirm the water is indeed falling",
+        "lat": 43.088715,
+        "lng": -79.0864126
+      },
+      {
+        "title": "Niagara Speedway",
+        "image": "gokart.jpeg",
+        "address": "4960 Clifton Hill, Niagara Falls, ON L2G 3N4, Canada",
+        "description": "Oops I didn't know you wanted to drive next to me :(",
+        "lat": 43.090907,
+        "lng": -79.0767665
+      },
+      {
+        "title": "Peller Estates",
+        "image": "wine.jpeg",
+        "address": "290 John St E, Niagara-on-the-Lake, ON L0S 1J0, Canada",
+        "description": "The ice wine was so good... such a shame that I only have one of the glasses left",
+        "lat": 43.2385798,
+        "lng": -79.067047
+      },
+      {
+        "title": "Niagara on the Lake",
+        "image": "notl.jpeg",
+        "address": "143 Front St, Niagara-on-the-Lake, ON L0S 1T0, Canada",
+        "description": "One of my favorite small towns ever... this entire weekend was just magical with you <3",
+        "lat": 43.2593174,
+        "lng": -79.0730379
+      },
+      {
+        "title": "Soko Bakery",
+        "image": "pulled_pork.jpeg",
+        "address": "358 Mary St, Niagara-on-the-Lake, ON L0S 1J0, Canada",
+        "description": "Omg the sandwiches here were absolutely amazing... this place is def money laundering though",
+        "lat": 43.2545818,
+        "lng": -79.0872106
+      }
+    ]
+  }
+];
+
+const LETTER = `
+Dear Janice,
+
+Don’t worry, I’ll give you a handwritten version of this so you can physically keep it.
+
+I can’t believe it’s been six months already. Six phenomenal months, during which I had the privilege of calling you mine. Technically we’ve known each other for nine, but hey—we were zoo buddies for the first three.
+
+We haven’t had this long of a period of time apart since right after we first started dating, and every day I miss you more than I did the day before. In a way, though, it’s comforting. Feeling a connection with an amazing person thousands of miles away, and knowing that she loves me the way I love her.
+
+I know I’ve already said this a billion times, but the Niagara trip last month meant so much to me. All of our trips do, but this one in particular I keep going back to. I’m literally tearing up just looking at photos while putting this game together. I love you so much, and I appreciate you so much for planning that trip. I genuinely mean it when I say it was the happiest weekend of my life. Just writing about it, I’m tearing up again.
+
+I can’t wait to make more memories with you <3 You’re such an incredible person to experience life with, and I’m really excited about what the future holds for us. I love you so much, baby. Happy 6 months, and I can’t wait to celebrate our 25 years one day.
+
+- Thomas
+
+`;

@@ -1,0 +1,225 @@
+* {
+  transition: opacity 0.2s;
+}
+
+html, body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #aad0ce;
+  overflow: hidden;
+}
+
+.container {
+  background-color: #aad0ce;
+  border: 5px solid #fff;
+  border-radius: 50px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  padding: 40px;
+  box-shadow: 0 0 20px #478e8d;
+}
+
+.photocards {
+  position: relative;
+  height: 40vh;
+  margin-top: 50px;
+}
+
+.photocard {
+  height: 100%;
+  max-height: 32vh;
+  width: 100%;
+  max-width: 32vw;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #6a9e9d;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.photocard.wide {
+  max-width: 50vw;
+  max-height: 32vh;
+}
+
+.photocard.left {
+  left: 50%;
+  margin-left: -32vw;
+  transform: rotate(-5deg);
+  z-index: 2;
+}
+
+.photocard.right {
+  top: 50px;
+  left: 50%;
+  margin-left: 0;
+  transform: rotate(10deg);
+  z-index: 1;
+}
+
+.photocard.first {
+  left: 50%;
+  margin-left: -25vw;
+  transform: rotate(-5deg);
+  z-index: 3;
+}
+
+.photocard.second {
+  left: 50%;
+  margin-left: -25vw;
+  transform: rotate(8deg);
+  z-index: 2;
+}
+
+.photocard.third {
+  left: 50%;
+  margin-left: -25vw;
+  transform: rotate(-1deg);
+  z-index: 1;
+}
+
+.photocard .img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+  background-position: center center;
+}
+
+.photocard.left .img {
+  background-image: url('images/home/left.jpeg');
+}
+
+.photocard.right .img {
+  background-image: url('images/home/right.jpg');
+}
+
+.content {
+  display: none;
+  opacity: 0;
+  position: asbolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+}
+
+h1 {
+  margin-top: 100px;
+  margin-bottom: 0;
+  font-family: "Meow Script", cursive;
+  font-weight: 400;
+  font-size: 80px;
+  font-style: normal;
+  color: #75450f;
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  transition: margin-top 0.2s;
+  text-shadow: 0 0 10px #6a9e9d;
+}
+
+h2 {
+  margin-top: 35vh;
+  margin-bottom: 0;
+  font-family: "Meow Script", cursive;
+  font-weight: 400;
+  font-size: 60px;
+  font-style: normal;
+  color: #75450f;
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  transition: margin-top 0.2s;
+  text-shadow: 0 0 10px #6a9e9d;
+}
+
+h3 {
+  font-family: "Domine", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #75450f;
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  text-shadow: 0 0 10px #6a9e9d;
+}
+
+button {
+  appearance: none;
+  padding: 20px 40px;
+  width: 80%;
+  border: 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 10%;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #aad0ce;
+  box-shadow: 0 0 10px #6a9e9d;
+}
+
+#title-screen, #game-container, #ending-screen {
+  display: none;
+  opacity: 0;
+}
+
+#map {
+  height: 35vh;
+  width: calc(100% - 80px);
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+}
+
+.place-address {
+  color: #aaa;
+}
+
+.place-description {
+  font-family: "Domine", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tap-to-continue {
+  color: #aaa;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#ending-letter {
+  font-family: "Domine", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  overflow-y: auto;
+  line-height: 26px;
+}

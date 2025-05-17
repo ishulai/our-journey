@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Journey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Leckerli+One&family=Meow+Script&family=Mynerve&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="home-screen">
+      <h1>Our Journey</h1>
+      <h3>— 6 Months Together</h3>
+      <div class="photocards">
+        <div class="photocard left">
+          <div class="img"></div>
+        </div>
+        <div class="photocard right">
+          <div class="img"></div>
+        </div>
+      </div>
+      <button id="start-button">Begin Our Journey</button>
+    </div>
+    <div id="title-screen">
+      <h2 id="title"></h2>
+      <h3 id="date"></h3>
+    </div>
+    <div id="game-container">
+      <h3>Guess the location of each photo</h3>
+      <div class="photocards">
+        <div class="photocard wide first">
+          <div class="img" id="photocard1"></div>
+          <div class="content" id="content1">
+            <h4 class="place-title" id="place-title-1"></h4>
+            <h5 class="place-address" id="place-address-1"></h5>
+            <p class="place-description" id="place-description-1"></p>
+            <div class="tap-to-continue">Tap to Continue</div>
+          </div>
+        </div>
+        <div class="photocard wide second">
+          <div class="img" id="photocard2"></div>
+          <div class="content" id="content2">
+            <h4 class="place-title" id="place-title-2"></h4>
+            <h5 class="place-address" id="place-address-2"></h5>
+            <p class="place-description" id="place-description-2"></p>
+            <div class="tap-to-continue">Tap to Continue</div>
+          </div>
+        </div>
+        <div class="photocard wide third">
+          <div class="img" id="photocard3"></div>
+          <div class="content" id="content3">
+            <h4 class="place-title" id="place-title-3"></h4>
+            <h5 class="place-address" id="place-address-3"></h5>
+            <p class="place-description" id="place-description-3"></p>
+            <div class="tap-to-continue">Tap to Continue</div>
+          </div>
+        </div>
+      </div>
+      <div id="map"></div>
+    </div>
+    <div id="ending-screen">
+      <h2 id="ending-title">Yay, you made it!!</h2>
+      <div id="ending-letter"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="scripts/helpers.js"></script>
+  <script src="scripts/dates.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
