@@ -2,6 +2,13 @@ let map = null;
 
 let currentDateIndex = 0;
 
+const STATES = {
+  chooseMarker: 0,
+  tapNext: 1,
+};
+
+let currentState = STATES.chooseMarker;
+
 const renderTitleScreen = async () => {
   return new Promise((resolve, reject) => {
     const currentDate = DATES[currentDateIndex];
@@ -42,10 +49,13 @@ const renderPlace = () => {
     const marker = L.marker([place.lat, place.lng])
       .addTo(group);
     marker.on('click', () => {
+      if (currentState !== STATES.chooseMarker) return;
       if (currentPlaces[currentPlaceIndex].address === place.address) {
         hide(id("photocard" + (currentPlaceIndex + 1)));
         show(id("content" + (currentPlaceIndex + 1)));
         map.removeLayer(marker);
+        currentPlaceIndex++;
+        currentState = STATES.tapNext;
       }
     });
   });
@@ -115,9 +125,10 @@ id("start-button").addEventListener("click", () => {
 
 for (let i = 1; i <= 3; i++) {
   id("photocard" + i).parentElement.addEventListener("click", (e) => {
-    if (currentPlaceIndex === i - 1) {
+    if (currentState !== STATES.tapNext) return;
+    if (currentPlaceIndex === i) {
       hide(id("photocard" + i).parentElement);
-      currentPlaceIndex++;
+      currentState = STATES.chooseMarker;
     }
     if (currentPlaceIndex === 3) {
       currentDateIndex++;
