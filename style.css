@@ -25,13 +25,13 @@ html, body {
 
 .photocards {
   position: relative;
-  height: 40vh;
+  height: 32vh;
   margin-top: 50px;
 }
 
 .photocard {
   height: 100%;
-  max-height: 32vh;
+  max-height: 26vh;
   width: 100%;
   max-width: 32vw;
   background-color: #fff;
@@ -111,7 +111,7 @@ html, body {
 }
 
 h1 {
-  margin-top: 100px;
+  margin-top: 40px;
   margin-bottom: 0;
   font-family: "Meow Script", cursive;
   font-weight: 400;
@@ -155,13 +155,12 @@ h3 {
 button {
   appearance: none;
   padding: 20px 40px;
-  width: 80%;
+  width: 100%;
   border: 0;
   background-color: #ffffff;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 20px;
-  margin-left: 10%;
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
