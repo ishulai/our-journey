@@ -46,7 +46,6 @@ const renderPlace = () => {
         hide(id("photocard" + (currentPlaceIndex + 1)));
         show(id("content" + (currentPlaceIndex + 1)));
         map.removeLayer(marker);
-        currentPlaceIndex++;
       }
     });
   });
@@ -116,8 +115,9 @@ id("start-button").addEventListener("click", () => {
 
 for (let i = 1; i <= 3; i++) {
   id("photocard" + i).parentElement.addEventListener("click", (e) => {
-    if (currentPlaceIndex === i) {
+    if (currentPlaceIndex === i - 1) {
       hide(id("photocard" + i).parentElement);
+      currentPlaceIndex++;
     }
     if (currentPlaceIndex === 3) {
       currentDateIndex++;
