@@ -176,7 +176,7 @@ button {
 }
 
 #map {
-  height: 25vh;
+  height: 28vh;
   width: calc(100% - 80px);
   margin: auto;
   border-radius: 20px;
@@ -229,5 +229,5 @@ button {
   text-align: center;
   text-transform: uppercase;
   color: #fff;
-  font-size: 14px;
+  font-size: 10px;
 }
