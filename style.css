@@ -116,7 +116,7 @@ h1 {
   margin-bottom: 0;
   font-family: "Meow Script", cursive;
   font-weight: 400;
-  font-size: 80px;
+  font-size: 60px;
   font-style: normal;
   color: #75450f;
   width: 80%;
@@ -151,6 +151,7 @@ h3 {
   margin-left: 10%;
   text-align: center;
   text-shadow: 0 0 10px #6a9e9d;
+  font-size: 16px;
 }
 
 button {
@@ -160,7 +161,7 @@ button {
   border: 0;
   background-color: #ffffff;
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 15px;
   margin-top: 20px;
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
