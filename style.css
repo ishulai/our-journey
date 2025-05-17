@@ -41,7 +41,7 @@ html, body {
   border-radius: 10px;
   box-shadow: 0 0 10px #6a9e9d;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 10px;
 }
 
 .photocard.wide {
@@ -176,7 +176,7 @@ button {
 }
 
 #map {
-  height: 35vh;
+  height: 25vh;
   width: calc(100% - 80px);
   margin: auto;
   border-radius: 20px;
@@ -223,4 +223,11 @@ button {
   bottom: 40px;
   overflow-y: auto;
   line-height: 26px;
+}
+
+.instructions {
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
 }
