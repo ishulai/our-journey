@@ -1,5 +1,6 @@
 * {
   transition: opacity 0.2s;
+  user-select: none;
 }
 
 html, body {
@@ -31,7 +32,7 @@ html, body {
 
 .photocard {
   height: 100%;
-  max-height: 26vh;
+  max-height: 24vh;
   width: 100%;
   max-width: 32vw;
   background-color: #fff;
@@ -45,7 +46,7 @@ html, body {
 
 .photocard.wide {
   max-width: 50vw;
-  max-height: 32vh;
+  max-height: 30vh;
 }
 
 .photocard.left {
@@ -111,7 +112,7 @@ html, body {
 }
 
 h1 {
-  margin-top: 20px;
+  margin-top: 0;
   margin-bottom: 0;
   font-family: "Meow Script", cursive;
   font-weight: 400;
